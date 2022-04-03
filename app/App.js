@@ -14,6 +14,8 @@ import HelpType from './src/screens/helpType';
 import BrowseRequests from './src/screens/browseRequests';
 import ReqItem from './src/screens/reqItem';
 import ThankYou from './src/screens/thankyou';
+import Home from './src/screens/home';
+import Maps from './src/screens/map';
 
 
 const Stack = createStackNavigator();
@@ -22,7 +24,7 @@ const Stack = createStackNavigator();
 function MyStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Onboard"
+      initialRouteName="Home"
     >
       <Stack.Screen 
         name="Onboard" 
@@ -77,6 +79,16 @@ function MyStack() {
     <Stack.Screen 
       name="Thankyou" 
       component={ThankYou} 
+      options={{ headerShown: false}} 
+    />
+    <Stack.Screen 
+      name="Home" 
+      component={Home} 
+      options={{ headerShown: false}} 
+    />
+    <Stack.Screen 
+      name="Maps" 
+      component={Maps} 
       options={{ headerShown: false}} 
     />
     </Stack.Navigator>
